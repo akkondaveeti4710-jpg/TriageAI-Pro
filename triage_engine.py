@@ -41,3 +41,15 @@ Assigned TRIAGE LEVEL {level}
 """""
 
     return level, report
+
+def critical_alerts(patient):
+
+    alerts = []
+
+    if patient["oxygen"] < 88:
+        alerts.append("CRITICAL: Oxygen dangerously low")
+    if patient["bp_sys"] < 80:
+        alerts.append("CRITICAL: Severe hypotension")
+    if patient["heart_rate"] > 140:
+        alerts.append("CRITICAL: Extreme tachycardia")
+    return alerts
