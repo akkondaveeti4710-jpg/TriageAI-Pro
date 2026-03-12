@@ -44,3 +44,21 @@ def create_patient():
     }
 
     return patient
+
+import uuid
+
+def create_patient():
+
+    patient_id =str(uuid.uuid4())[:8]
+
+    name = input("Patient Name: ")
+    age = int(input("Age: "))
+
+    patient = {
+        "id": patient_id,
+        "name": name,
+        "age": age
+
+    }
+
+    return patient
