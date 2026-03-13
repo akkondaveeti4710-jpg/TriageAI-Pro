@@ -53,3 +53,9 @@ def critical_alerts(patient):
     if patient["heart_rate"] > 140:
         alerts.append("CRITICAL: Extreme tachycardia")
     return alerts
+
+from risk_models.severity_predictor import predict_severity
+
+severity = predict_severity(patient, total)
+
+report += f"\nPredicted Condition Severity: {severity}\n"
