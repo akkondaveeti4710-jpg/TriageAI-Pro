@@ -51,3 +51,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+from analytics.resource_estimator import estimate_resources
+
+resources = estimate_resources(queue)
+
+print("\nHospital Resource Estimate")
+print("Beds needed:", resources["beds"])
+print("Doctors needed:", resources["doctors"])
+print("Nurses needed:", resources["nurses"])
+
